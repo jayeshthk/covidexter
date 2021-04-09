@@ -335,26 +335,34 @@ class _MyHomePageState extends State<MyHomePage> {
                     ])
                   ],
                 ),
+                SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                          height: 200,
+                          color: Colors.red,
+                        )
+                      ],
+                    )),
               ],
             ),
           ),
-          SingleChildScrollView(
-            child: Column(
-              children: <Widget>[
-                SizedBox(
-                  height: 220,
+          Column(
+            children: <Widget>[
+              SizedBox(
+                height: 220,
+              ),
+              CircleAvatar(
+                backgroundColor: Colors.black,
+                radius: 60,
+                child: CircleAvatar(
+                  radius: 58,
+                  backgroundImage: NetworkImage(
+                      "https://3.bp.blogspot.com/-MgweNt7imWY/W8loDgvmRmI/AAAAAAAAKeo/sn10RpoyAOInty4mgjFo_eMOF1XQxeiVgCEwYBhgL/s1600/leh-ladhak.jpg"),
                 ),
-                CircleAvatar(
-                  backgroundColor: Colors.black,
-                  radius: 60,
-                  child: CircleAvatar(
-                    radius: 58,
-                    backgroundImage: NetworkImage(
-                        "https://3.bp.blogspot.com/-MgweNt7imWY/W8loDgvmRmI/AAAAAAAAKeo/sn10RpoyAOInty4mgjFo_eMOF1XQxeiVgCEwYBhgL/s1600/leh-ladhak.jpg"),
-                  ),
-                )
-              ],
-            ),
+              )
+            ],
           )
         ],
       ),
