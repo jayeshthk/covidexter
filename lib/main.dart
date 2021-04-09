@@ -164,24 +164,197 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ]),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(children: <Widget>[
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Text(
+                    "| Recommended by 23 travellers :",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      color: Colors.grey.shade500,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ]),
+                SizedBox(
+                  height: 20,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(children: <Widget>[
+                    SizedBox(
+                      width: 15,
+                    ),
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundImage: NetworkImage(
+                          'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundImage: NetworkImage(
+                          'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundImage: NetworkImage(
+                          'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundImage: NetworkImage(
+                          'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundImage: NetworkImage(
+                          'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundImage: NetworkImage(
+                          'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundImage: NetworkImage(
+                          'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                  ]),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(children: <Widget>[
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Text(
+                    "| Sudama's Interests :",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      color: Colors.grey.shade500,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ]),
+                SizedBox(
+                  height: 20,
+                ),
+                Column(
+                  children: <Widget>[
+                    Row(children: <Widget>[
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Icon(
+                        Icons.electric_bike,
+                        size: 35,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        'Road trips',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(
+                        Icons.beach_access,
+                        size: 35,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        'Beaches',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ]),
+                    SizedBox(
+                      height: 13,
+                    ),
+                    Row(children: <Widget>[
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Icon(
+                        Icons.article_outlined,
+                        size: 35,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        'Craft art',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(
+                        Icons.agriculture,
+                        size: 35,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        'Agriculture',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ])
+                  ],
+                ),
               ],
             ),
           ),
-          Column(
-            children: <Widget>[
-              SizedBox(
-                height: 220,
-              ),
-              CircleAvatar(
-                backgroundColor: Colors.black,
-                radius: 60,
-                child: CircleAvatar(
-                  radius: 58,
-                  backgroundImage: NetworkImage(
-                      "https://3.bp.blogspot.com/-MgweNt7imWY/W8loDgvmRmI/AAAAAAAAKeo/sn10RpoyAOInty4mgjFo_eMOF1XQxeiVgCEwYBhgL/s1600/leh-ladhak.jpg"),
+          SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 220,
                 ),
-              )
-            ],
+                CircleAvatar(
+                  backgroundColor: Colors.black,
+                  radius: 60,
+                  child: CircleAvatar(
+                    radius: 58,
+                    backgroundImage: NetworkImage(
+                        "https://3.bp.blogspot.com/-MgweNt7imWY/W8loDgvmRmI/AAAAAAAAKeo/sn10RpoyAOInty4mgjFo_eMOF1XQxeiVgCEwYBhgL/s1600/leh-ladhak.jpg"),
+                  ),
+                )
+              ],
+            ),
           )
         ],
       ),
