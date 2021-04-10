@@ -424,6 +424,18 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             DrawerHeader(
               child: Container(
+                child: Text(
+                  "💡"
+                  'Tips'
+                  "💡",
+                  style: TextStyle(
+                    fontFamily: 'Avenir',
+                    fontStyle: FontStyle.italic,
+                    fontSize: 24,
+                    fontWeight: FontWeight.w700,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
                 height: 142,
                 width: MediaQuery.of(context).size.width,
               ),
@@ -440,8 +452,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.of(context).pop();
               },
               child: Text(
-                'Profile',
+                'Always arrange first meet at public place',
                 style: TextStyle(
+                  color: Color(0xffffc107),
                   fontFamily: 'Avenir',
                   fontSize: 24,
                   fontWeight: FontWeight.w700,
@@ -455,8 +468,9 @@ class _MyHomePageState extends State<MyHomePage> {
             GestureDetector(
               onTap: () {},
               child: Text(
-                'Settings',
+                'Be smart ,Abide COVID norms.carry cash and working mobile',
                 style: TextStyle(
+                  color: Color(0xffffc107),
                   fontFamily: 'Avenir',
                   fontSize: 24,
                   fontWeight: FontWeight.w700,
@@ -468,8 +482,9 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 45,
             ),
             Text(
-              'About',
+              'varify all the factors and beneficiary before leaving',
               style: TextStyle(
+                color: Color(0xffffc107),
                 fontFamily: 'Avenir',
                 fontSize: 24,
                 fontWeight: FontWeight.w700,
@@ -480,8 +495,9 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 45,
             ),
             Text(
-              'Log Out',
+              'Before meeting another travellers first meet them using video call',
               style: TextStyle(
+                color: Color(0xffffc107),
                 fontFamily: 'Avenir',
                 fontSize: 24,
                 fontWeight: FontWeight.w700,
@@ -500,7 +516,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.black,
                 child: Center(
                   child: Text(
-                    'v1.0.1',
+                    'Made with ❤ by Sumit Jain & Jayesh Thakare ',
                     style: TextStyle(
                       fontFamily: 'Avenir',
                       fontSize: 20,
