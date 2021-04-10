@@ -28,342 +28,349 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[
           SingleChildScrollView(
             child: Column(
-              children: <Widget>[
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: Container(
-                        width: 5000,
-                        height: 300,
-                        child: Image.network(
-                            "https://images.thrillophilia.com/image/upload/s--6kfJr-kh--/c_fill,h_600,q_auto,w_975/f_auto,fl_strip_profile/v1/images/photos/000/183/282/original/1575443721_bike.png.jpg?1575443721"),
+              children: [
+                Stack(children: <Widget>[
+                  Column(
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Container(
+                              width: 5000,
+                              height: 300,
+                              child: Image.network(
+                                  "https://images.thrillophilia.com/image/upload/s--6kfJr-kh--/c_fill,h_600,q_auto,w_975/f_auto,fl_strip_profile/v1/images/photos/000/183/282/original/1575443721_bike.png.jpg?1575443721"),
+                            ),
+                          )
+                        ],
                       ),
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 40,
-                ),
-                //likes and dislike as well as name and varification
-                Row(
-                  children: <Widget>[
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "Sudama sahu",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                    Icon(
-                      Icons.verified,
-                      color: Colors.green,
-                    ),
-                    SizedBox(
-                      width: 30,
-                    ),
-                    FloatingActionButton(
-                      backgroundColor: Color(0xffffc107),
-                      child: Icon(
-                        Icons.thumb_up,
-                        color: Colors.grey,
+                      SizedBox(
+                        height: 40,
                       ),
-                    ),
-                    SizedBox(
-                      width: 40,
-                    ),
-                    FloatingActionButton(
-                        backgroundColor: Color(0xffffc107),
-                        child: Icon(Icons.thumb_down, color: Colors.grey)),
-                  ],
-                ),
+                      //likes and dislike as well as name and varification
+                      Row(
+                        children: <Widget>[
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Sudama sahu",
+                            style: TextStyle(fontSize: 17),
+                          ),
+                          Icon(
+                            Icons.verified,
+                            color: Colors.green,
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          FloatingActionButton(
+                            backgroundColor: Color(0xffffc107),
+                            child: Icon(
+                              Icons.thumb_up,
+                              color: Colors.grey,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 40,
+                          ),
+                          FloatingActionButton(
+                              backgroundColor: Color(0xffffc107),
+                              child:
+                                  Icon(Icons.thumb_down, color: Colors.grey)),
+                        ],
+                      ),
 
-                SizedBox(
-                  height: 10,
-                ),
-                Row(children: <Widget>[
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Text(
-                    "MUM1234 | Mumbai | Photographer",
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ]),
-                SizedBox(
-                  height: 30,
-                ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(children: <Widget>[
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          "MUM1234 | Mumbai | Photographer",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ]),
+                      SizedBox(
+                        height: 30,
+                      ),
 
-                //invite frnds and message
-                Row(
-                  children: <Widget>[
-                    FloatingActionButton.extended(
-                        backgroundColor: Color(0xffffc107),
-                        icon: Icon(
-                          Icons.group_add_rounded,
-                          color: Colors.black,
+                      //invite frnds and message
+                      Row(
+                        children: <Widget>[
+                          FloatingActionButton.extended(
+                              backgroundColor: Color(0xffffc107),
+                              icon: Icon(
+                                Icons.group_add_rounded,
+                                color: Colors.black,
+                              ),
+                              onPressed: null,
+                              label: Text(
+                                "invite to your trip",
+                                style: TextStyle(color: Colors.black),
+                              )),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          FloatingActionButton.extended(
+                              backgroundColor: Color(0xffffc107),
+                              icon: Icon(
+                                Icons.message_outlined,
+                                color: Colors.black,
+                              ),
+                              onPressed: null,
+                              label: Text(
+                                "Message",
+                                style: TextStyle(color: Colors.black),
+                              ))
+                        ],
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(children: <Widget>[
+                        SizedBox(
+                          width: 15,
                         ),
-                        onPressed: null,
-                        label: Text(
-                          "invite to your trip",
-                          style: TextStyle(color: Colors.black),
-                        )),
-                    SizedBox(
-                      width: 30,
-                    ),
-                    FloatingActionButton.extended(
-                        backgroundColor: Color(0xffffc107),
-                        icon: Icon(
-                          Icons.message_outlined,
-                          color: Colors.black,
+                        Text(
+                          "| About Sudama :",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            color: Colors.grey.shade500,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                        onPressed: null,
-                        label: Text(
-                          "Message",
-                          style: TextStyle(color: Colors.black),
-                        ))
-                  ],
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Row(children: <Widget>[
-                  SizedBox(
-                    width: 15,
+                      ]),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(children: <Widget>[
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Text(
+                            " Take me anywhere and make me feel special."
+                            " places you visit becomes a part of your personality somehow.",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 17,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                      ]),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(children: <Widget>[
+                        SizedBox(
+                          width: 15,
+                        ),
+                        Text(
+                          "| Recommended by 23 travellers :",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            color: Colors.grey.shade500,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ]),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(children: <Widget>[
+                          SizedBox(
+                            width: 15,
+                          ),
+                          CircleAvatar(
+                            radius: 50,
+                            backgroundImage: NetworkImage(
+                                'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          CircleAvatar(
+                            radius: 50,
+                            backgroundImage: NetworkImage(
+                                'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          CircleAvatar(
+                            radius: 50,
+                            backgroundImage: NetworkImage(
+                                'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          CircleAvatar(
+                            radius: 50,
+                            backgroundImage: NetworkImage(
+                                'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          CircleAvatar(
+                            radius: 50,
+                            backgroundImage: NetworkImage(
+                                'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          CircleAvatar(
+                            radius: 50,
+                            backgroundImage: NetworkImage(
+                                'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          CircleAvatar(
+                            radius: 50,
+                            backgroundImage: NetworkImage(
+                                'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                        ]),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(children: <Widget>[
+                        SizedBox(
+                          width: 15,
+                        ),
+                        Text(
+                          "| Sudama's Interests :",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            color: Colors.grey.shade500,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ]),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Row(children: <Widget>[
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Icon(
+                              Icons.electric_bike,
+                              size: 35,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              'Road trips',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Icon(
+                              Icons.beach_access,
+                              size: 35,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              'Beaches',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ]),
+                          SizedBox(
+                            height: 13,
+                          ),
+                          Row(children: <Widget>[
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Icon(
+                              Icons.article_outlined,
+                              size: 35,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              'Craft art',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Icon(
+                              Icons.agriculture,
+                              size: 35,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              'Agriculture',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ])
+                        ],
+                      ),
+                      SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: <Widget>[
+                              Container(
+                                height: 200,
+                                color: Colors.red,
+                              )
+                            ],
+                          )),
+                    ],
                   ),
-                  Text(
-                    "| About Sudama :",
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      color: Colors.grey.shade500,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
+                  Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 220,
+                      ),
+                      CircleAvatar(
+                        backgroundColor: Colors.black,
+                        radius: 60,
+                        child: CircleAvatar(
+                          radius: 58,
+                          backgroundImage: NetworkImage(
+                              "https://3.bp.blogspot.com/-MgweNt7imWY/W8loDgvmRmI/AAAAAAAAKeo/sn10RpoyAOInty4mgjFo_eMOF1XQxeiVgCEwYBhgL/s1600/leh-ladhak.jpg"),
+                        ),
+                      ),
+                    ],
+                  )
                 ]),
-                SizedBox(
-                  height: 10,
-                ),
-                Row(children: <Widget>[
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Expanded(
-                    child: Text(
-                      " Take me anywhere and make me feel special."
-                      " places you visit becomes a part of your personality somehow.",
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 17,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
-                ]),
-                SizedBox(
-                  height: 20,
-                ),
-                Row(children: <Widget>[
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Text(
-                    "| Recommended by 23 travellers :",
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      color: Colors.grey.shade500,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ]),
-                SizedBox(
-                  height: 20,
-                ),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(children: <Widget>[
-                    SizedBox(
-                      width: 15,
-                    ),
-                    CircleAvatar(
-                      radius: 50,
-                      backgroundImage: NetworkImage(
-                          'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
-                    ),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    CircleAvatar(
-                      radius: 50,
-                      backgroundImage: NetworkImage(
-                          'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
-                    ),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    CircleAvatar(
-                      radius: 50,
-                      backgroundImage: NetworkImage(
-                          'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
-                    ),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    CircleAvatar(
-                      radius: 50,
-                      backgroundImage: NetworkImage(
-                          'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
-                    ),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    CircleAvatar(
-                      radius: 50,
-                      backgroundImage: NetworkImage(
-                          'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
-                    ),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    CircleAvatar(
-                      radius: 50,
-                      backgroundImage: NetworkImage(
-                          'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
-                    ),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    CircleAvatar(
-                      radius: 50,
-                      backgroundImage: NetworkImage(
-                          'https://avatars.githubusercontent.com/u/56386987?s=460&u=ff8178925da2004cb8491cfcf6573972868872d7&v=4'),
-                    ),
-                    SizedBox(
-                      width: 15,
-                    ),
-                  ]),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Row(children: <Widget>[
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Text(
-                    "| Sudama's Interests :",
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      color: Colors.grey.shade500,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ]),
-                SizedBox(
-                  height: 20,
-                ),
-                Column(
-                  children: <Widget>[
-                    Row(children: <Widget>[
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Icon(
-                        Icons.electric_bike,
-                        size: 35,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        'Road trips',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Icon(
-                        Icons.beach_access,
-                        size: 35,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        'Beaches',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ]),
-                    SizedBox(
-                      height: 13,
-                    ),
-                    Row(children: <Widget>[
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Icon(
-                        Icons.article_outlined,
-                        size: 35,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        'Craft art',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Icon(
-                        Icons.agriculture,
-                        size: 35,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        'Agriculture',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ])
-                  ],
-                ),
-                SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: <Widget>[
-                        Container(
-                          height: 200,
-                          color: Colors.red,
-                        )
-                      ],
-                    )),
               ],
             ),
           ),
-          Column(
-            children: <Widget>[
-              SizedBox(
-                height: 220,
-              ),
-              CircleAvatar(
-                backgroundColor: Colors.black,
-                radius: 60,
-                child: CircleAvatar(
-                  radius: 58,
-                  backgroundImage: NetworkImage(
-                      "https://3.bp.blogspot.com/-MgweNt7imWY/W8loDgvmRmI/AAAAAAAAKeo/sn10RpoyAOInty4mgjFo_eMOF1XQxeiVgCEwYBhgL/s1600/leh-ladhak.jpg"),
-                ),
-              )
-            ],
-          )
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -399,6 +406,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Color(0xffffc107),
+        child: Icon(Icons.lightbulb),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }
