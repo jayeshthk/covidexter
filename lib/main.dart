@@ -588,6 +588,30 @@ class _MyHomePageState extends State<MyHomePage> {
       }
     });
   }
+  _clearImage() async {
+    setState(() {
+      _image = null;
+
+    });
+  }
+  Widget _setImageView() {
+    return Scaffold(
+      body: SafeArea(
+        
+        child: Center(
+          child: GestureDetector(
+
+            child: Image.network(
+              'https://flutter-examples.com/wp-content/uploads/2019/09/image_button.png',
+              width: 200,
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   void _showPicker(context) {
     showModalBottomSheet(
         context: context,
@@ -609,6 +633,23 @@ class _MyHomePageState extends State<MyHomePage> {
                     onTap: () {
                       _imgFromCamera();
                       Navigator.of(context).pop();
+                    },
+                  ),
+                  new ListTile(
+                    leading: new Icon(Icons.delete),
+                    title: new Text('Remove Image'),
+                    onTap: () {
+                      _clearImage();
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                  new ListTile(
+                    leading: new Icon(Icons.delete),
+                    title: new Text('Show Image'),
+                    onTap: () {
+                      _setImageView();
+                      Navigator.of(context).pop();
+                      print("called");
                     },
                   ),
                 ],
