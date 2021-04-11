@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'dart:io';
+import 'dart:typed_data';
 
 void main() {
   runApp(MyApp());
@@ -21,6 +24,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  File _image;
+  ImagePicker picker = new ImagePicker();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -356,15 +361,36 @@ class _MyHomePageState extends State<MyHomePage> {
                       SizedBox(
                         height: 220,
                       ),
-                      CircleAvatar(
-                        backgroundColor: Colors.black,
-                        radius: 60,
+                      GestureDetector(
+                        onTap: () {
+                          _showPicker(context);
+                        },
                         child: CircleAvatar(
-                          radius: 58,
-                          backgroundImage: NetworkImage(
-                              "https://3.bp.blogspot.com/-MgweNt7imWY/W8loDgvmRmI/AAAAAAAAKeo/sn10RpoyAOInty4mgjFo_eMOF1XQxeiVgCEwYBhgL/s1600/leh-ladhak.jpg"),
+                          radius: 65,
+                          backgroundColor: Colors.black,
+                          child: _image != null
+                              ? ClipRRect(
+                            borderRadius: BorderRadius.circular(60),
+                            child: Image.file(
+                              _image,
+                              width: 125,
+                              height: 125,
+                              fit: BoxFit.fitHeight,
+                            ),
+                          )
+                              : Container(
+                            decoration: BoxDecoration(
+                                color: Colors.grey[200],
+                                borderRadius: BorderRadius.circular(60)),
+                            width: 125,
+                            height: 125,
+                            child: Icon(
+                              Icons.camera_alt,
+                              color: Colors.grey[800],
+                            ),
+                          ),
                         ),
-                      ),
+                      )
                     ],
                   )
                 ]),
@@ -532,4 +558,65 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+  _imgFromCamera() async {
+    PickedFile file = await  picker.getImage(source: ImageSource.camera, imageQuality: 50);
+    Uint8List bytes = await file.readAsBytes();
+
+
+
+    setState(() {
+    if (file != null) {
+    _image = File(file.path);
+    } else {
+    print('No image selected.');
+    }
+    });
+  }
+
+
+  _imgFromGallery() async {
+    PickedFile file = await  picker.getImage(source: ImageSource.gallery, imageQuality: 50);
+    Uint8List bytes = await file.readAsBytes();
+
+
+
+    setState(() {
+      if (file != null) {
+        _image = File(file.path);
+      } else {
+        print('No image selected.');
+      }
+    });
+  }
+  void _showPicker(context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (BuildContext bc) {
+          return SafeArea(
+            child: Container(
+              child: new Wrap(
+                children: <Widget>[
+                  new ListTile(
+                      leading: new Icon(Icons.photo_library),
+                      title: new Text('Photo Library'),
+                      onTap: () {
+                        _imgFromGallery();
+                        Navigator.of(context).pop();
+                      }),
+                  new ListTile(
+                    leading: new Icon(Icons.photo_camera),
+                    title: new Text('Camera'),
+                    onTap: () {
+                      _imgFromCamera();
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                ],
+              ),
+            ),
+          );
+        }
+    );
+  }
 }
+
