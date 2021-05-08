@@ -47,3 +47,17 @@ In This project We added the features like:
 
 ![WhatsApp Image 2021-05-08 at 11 56 45 PM](https://user-images.githubusercontent.com/59503001/117549687-6e0f3380-b059-11eb-9367-c1eba012281f.jpeg)
 
+Extra impact:
+  With COVID-19 causing widespread school closures, children across the country are being given alternate resources, some online, to study outside of the classroom. Temporary solutions being devised for remote education range from online classroom tools like Google Classroom, to Zoom and podcasts by teachers. While parents are adjusting to this new scenario, during this time it’s also important to help kids stay focused on learning and avoid overuse of games, social media, and videos.
+
+“This is a stressful, unpredictable time for everyone, including families, parents and children.  You can help your children by providing them with a structure and routine,  and being a positive force in their education,”  says Dr. Pamela Hurst-Della Pietra, President of Children and Screens: Institute of Digital Media and Child Development.
+
+**so the app is basically targeted to little childrens and their awareness on covid.**
+
+1)Userfriendly UI
+2)historical and Geographical background
+3)good lessons/preventive measures
+4)helpline guidence
+5)FAQs
+6)Hospitals information
+7)Geographical impact
