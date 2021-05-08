@@ -140,29 +140,35 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(
                 height: 40,
               ),
-              FloatingActionButton.extended(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Historycovid()));
-                },
-                heroTag: "bt1",
-                icon: Icon(Icons.history),
-                label: Text("History"),
-              ),
-              SizedBox(
-                height: 40,
-              ),
-              FloatingActionButton.extended(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => GeographicalImpact()));
-                },
-                heroTag: "btn2",
-                icon: Icon(Icons.location_on),
-                label: Text("Geographical impact"),
-              ),
+              Row(
+                children: <Widget>[
+                  FloatingActionButton.extended(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Historycovid()));
+                    },
+                    heroTag: "bt1",
+                    icon: Icon(Icons.history),
+                    label: Text("History"),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  FloatingActionButton.extended(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => GeographicalImpact()));
+                    },
+                    heroTag: "btn2",
+                    icon: Icon(Icons.location_on),
+                    label: Text("Geographical impact"),
+                  ),
+                ],
+              )
             ],
           )
         ],
@@ -401,3 +407,4 @@ showAlertDialog3(BuildContext context) {
     },
   );
 }
+
