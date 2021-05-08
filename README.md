@@ -16,6 +16,15 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 
+Demo Video Of are Project is:
+
+
+
+https://user-images.githubusercontent.com/59503001/117549408-e4129b00-b057-11eb-827a-f3cc4761313f.mp4
+
+
+
+
 In This project We added the features like:
 1) Added the Text Buttons like Gov Directives,Faqs,Hospitals,Helpline NUmber
 2) We added GIF
