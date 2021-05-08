@@ -29,6 +29,12 @@ In This project We added the features like:
 1) Added the Text Buttons like Gov Directives,Faqs,Hospitals,Helpline NUmber
 2) We added GIF
 3) We added the Feature of Splash Screen
+4) We added the Covid History separate Page
+5) We added the Geographical Condition Page
+
+
+![WhatsApp Image 2021-05-08 at 11 56 46 PM](https://user-images.githubusercontent.com/59503001/117549675-5df75400-b059-11eb-8b1d-d39ba67eb9a5.jpeg)
+
 
 ![WhatsApp Image 2021-05-08 at 10 24 22 PM](https://user-images.githubusercontent.com/59503001/117547392-fc30ed00-b04c-11eb-84e2-0f525b1c1bdd.jpeg)
 
@@ -39,4 +45,5 @@ In This project We added the features like:
 ![WhatsApp Image 2021-05-08 at 10 31 44 PM (1)](https://user-images.githubusercontent.com/59503001/117547476-68135580-b04d-11eb-9a8c-dbde7fc1a5c6.jpeg)
 
 
+![WhatsApp Image 2021-05-08 at 11 56 45 PM](https://user-images.githubusercontent.com/59503001/117549687-6e0f3380-b059-11eb-9367-c1eba012281f.jpeg)
 
