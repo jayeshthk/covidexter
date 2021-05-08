@@ -370,25 +370,25 @@ class _MyHomePageState extends State<MyHomePage> {
                           backgroundColor: Colors.black,
                           child: _image != null
                               ? ClipRRect(
-                            borderRadius: BorderRadius.circular(60),
-                            child: Image.file(
-                              _image,
-                              width: 125,
-                              height: 125,
-                              fit: BoxFit.fitHeight,
-                            ),
-                          )
+                                  borderRadius: BorderRadius.circular(60),
+                                  child: Image.file(
+                                    _image,
+                                    width: 125,
+                                    height: 125,
+                                    fit: BoxFit.fitHeight,
+                                  ),
+                                )
                               : Container(
-                            decoration: BoxDecoration(
-                                color: Colors.grey[200],
-                                borderRadius: BorderRadius.circular(60)),
-                            width: 125,
-                            height: 125,
-                            child: Icon(
-                              Icons.camera_alt,
-                              color: Colors.grey[800],
-                            ),
-                          ),
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey[200],
+                                      borderRadius: BorderRadius.circular(60)),
+                                  width: 125,
+                                  height: 125,
+                                  child: Icon(
+                                    Icons.camera_alt,
+                                    color: Colors.grey[800],
+                                  ),
+                                ),
                         ),
                       )
                     ],
@@ -399,49 +399,18 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Color(0xFFffc107),
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white.withOpacity(.90),
-        selectedFontSize: 14,
-        unselectedFontSize: 14,
-        onTap: (value) {
-          // Respond to item press.
-        },
-        items: [
-          BottomNavigationBarItem(
-            title: Text('HOME'),
-            icon: Icon(Icons.home_filled),
-          ),
-          BottomNavigationBarItem(
-            title: Text('Trips'),
-            icon: Icon(Icons.wallet_travel),
-          ),
-          BottomNavigationBarItem(
-            title: Text('Prima'),
-            icon: Icon(Icons.landscape),
-          ),
-          BottomNavigationBarItem(
-            title: Text('Notification'),
-            icon: Icon(Icons.notifications),
-          ),
-          BottomNavigationBarItem(
-            title: Text('Travel'),
-            icon: Icon(Icons.directions_run_sharp),
-          ),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: CircleAvatar(
+        backgroundImage: AssetImage("images/er.png"),
+        radius: 50,
         child: Builder(
           builder: (context) => IconButton(
-            icon: Icon(Icons.lightbulb),
+            icon: ImageIcon(null),
             onPressed: () => Scaffold.of(context).openDrawer(),
           ),
         ),
         backgroundColor: Color(0xffffc107),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       drawer: Drawer(
         child: Column(
           children: <Widget>[
@@ -451,9 +420,7 @@ class _MyHomePageState extends State<MyHomePage> {
             DrawerHeader(
               child: Container(
                 child: Text(
-                  "💡"
-                  'Tips'
-                  "💡",
+                  'Preventive measures',
                   style: TextStyle(
                     fontFamily: 'Avenir',
                     fontStyle: FontStyle.italic,
@@ -478,7 +445,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.of(context).pop();
               },
               child: Text(
-                'Always arrange first meet at public place',
+                'Wear a mask',
                 style: TextStyle(
                   color: Color(0xffffc107),
                   fontFamily: 'Avenir',
@@ -494,7 +461,7 @@ class _MyHomePageState extends State<MyHomePage> {
             GestureDetector(
               onTap: () {},
               child: Text(
-                'Be smart ,Abide COVID norms.carry cash and working mobile',
+                'Clean your hands.',
                 style: TextStyle(
                   color: Color(0xffffc107),
                   fontFamily: 'Avenir',
@@ -508,7 +475,7 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 45,
             ),
             Text(
-              'varify all the factors and beneficiary before leaving',
+              'Maintain safe distance.',
               style: TextStyle(
                 color: Color(0xffffc107),
                 fontFamily: 'Avenir',
@@ -521,7 +488,7 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 45,
             ),
             Text(
-              'Before meeting another travellers first meet them using video call',
+              ' Get vaccinated.',
               style: TextStyle(
                 color: Color(0xffffc107),
                 fontFamily: 'Avenir',
@@ -558,27 +525,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+
   _imgFromCamera() async {
-    PickedFile file = await  picker.getImage(source: ImageSource.camera, imageQuality: 50);
+    PickedFile file =
+        await picker.getImage(source: ImageSource.camera, imageQuality: 50);
     Uint8List bytes = await file.readAsBytes();
-
-
-
-    setState(() {
-    if (file != null) {
-    _image = File(file.path);
-    } else {
-    print('No image selected.');
-    }
-    });
-  }
-
-
-  _imgFromGallery() async {
-    PickedFile file = await  picker.getImage(source: ImageSource.gallery, imageQuality: 50);
-    Uint8List bytes = await file.readAsBytes();
-
-
 
     setState(() {
       if (file != null) {
@@ -588,19 +539,32 @@ class _MyHomePageState extends State<MyHomePage> {
       }
     });
   }
+
+  _imgFromGallery() async {
+    PickedFile file =
+        await picker.getImage(source: ImageSource.gallery, imageQuality: 50);
+    Uint8List bytes = await file.readAsBytes();
+
+    setState(() {
+      if (file != null) {
+        _image = File(file.path);
+      } else {
+        print('No image selected.');
+      }
+    });
+  }
+
   _clearImage() async {
     setState(() {
       _image = null;
-
     });
   }
+
   Widget _setImageView() {
     return Scaffold(
       body: SafeArea(
-        
         child: Center(
           child: GestureDetector(
-
             child: Image.network(
               'https://flutter-examples.com/wp-content/uploads/2019/09/image_button.png',
               width: 200,
@@ -656,8 +620,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           );
-        }
-    );
+        });
   }
 }
-
