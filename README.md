@@ -1,4 +1,4 @@
-# profiledemo
+# Covidexter
 
 A new Flutter application.
 
