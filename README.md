@@ -22,3 +22,8 @@ In This project We added the features like:
 3) We added the Feature of Splash Screen
 
 ![WhatsApp Image 2021-05-08 at 10 24 22 PM](https://user-images.githubusercontent.com/59503001/117547392-fc30ed00-b04c-11eb-84e2-0f525b1c1bdd.jpeg)
+
+![WhatsApp Image 2021-05-08 at 10 31 44 PM](https://user-images.githubusercontent.com/59503001/117547470-634ea180-b04d-11eb-8b6d-8f85f8c4b633.jpeg)
+
+![WhatsApp Image 2021-05-08 at 10 31 44 PM (1)](https://user-images.githubusercontent.com/59503001/117547476-68135580-b04d-11eb-9a8c-dbde7fc1a5c6.jpeg)
+
